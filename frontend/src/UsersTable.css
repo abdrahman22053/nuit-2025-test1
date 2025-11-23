@@ -1,0 +1,148 @@
+/* --- Layout global --- */
+.page-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #f5f7fa;
+  color: #1e293b;
+  font-family: sans-serif;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  width: 230px;
+  background: #0f172a;
+  color: white;
+  padding: 25px 15px;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.menu li .icon {
+  font-size: 18px;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #1e293b;
+}
+
+/* --- Main content --- */
+.content {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+/* --- Topbar --- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.top-links a {
+  margin-left: 20px;
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Search + Add --- */
+.search-add {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  padding: 10px 15px;
+  width: 260px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  width: 100%;
+}
+
+.btn-add {
+  background: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-add:hover {
+  background: #1d4ed8;
+}
+
+/* --- User table --- */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.user-table thead {
+  background: #f1f5f9;
+  font-weight: bold;
+}
+
+.user-table th,
+.user-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-icon {
+  cursor: pointer;
+  font-size: 17px;
+  color: #475569;
+}
+
+.action-icon:hover {
+  color: #1e293b;
+}

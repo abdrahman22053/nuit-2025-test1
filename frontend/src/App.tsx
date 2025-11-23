@@ -1,11 +1,11 @@
 import './App.css'
+import UsersTable from "./UsersTable";
 
 function App() {
-
   return (
-    <>
-      <h1>React Project Test</h1>
-    </>
+    <div className="App">
+      <UsersTable />
+    </div>
   )
 }
 
