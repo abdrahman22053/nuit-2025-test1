@@ -1,66 +1,42 @@
-
 import "./UsersTable.css";
-import { FaEdit, FaEye, FaTrash, FaEllipsisV } from "react-icons/fa";
-import {FaSearch, FaTable, FaFolder, FaChartBar } from "react-icons/fa";
 
-export default function UserTable() {
+function UsersTable() {
   const users = [
     { name: "John Doe", email: "john.doe@example.com", role: "Administrator" },
-    { name: "Jane Smith", email: "john.doe@example.com", role: "Editor" },
-    { name: "Alex Johnson", email: "alex johnson@member", role: "Member" },
+    { name: "Jane Smith", email: "jane.smith@example.com", role: "Editor" },
+    { name: "Alex Johnson", email: "alex.johnson@member", role: "Member" },
     { name: "Emily Davis", email: "emily.davis@member", role: "Member" },
   ];
 
   return (
-    <div className="page-container">
-
-      {/* Sidebar */}
+    <div className="layout">
       <aside className="sidebar">
         <h2 className="sidebar-title">Navbar</h2>
-
-        <ul className="menu">
-          <li className="active">
-            <FaTable className="icon" /> Dashboard
-          </li>
-          <li>
-            <FaFolder className="icon" /> Projects
-          </li>
-          <li>
-            <FaChartBar className="icon" /> Reports
-          </li>
+        <ul className="sidebar-menu">
+          <li className="active">Dashboard</li>
+          <li>Projects</li>
+          <li>Reports</li>
         </ul>
       </aside>
 
-      {/* Main Content */}
-      <section className="content">
+      <main className="main">
+        <header className="topnav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+        </header>
 
-        {/* Top Navbar */}
-        <div className="topbar">
-          <div></div>
-          <div className="top-links">
-            <a href="/">Home</a>
-            <a href="/">About</a>
-          </div>
+        <div className="controls">
+          <input className="search" placeholder="Search" />
+          <button className="add-btn">Add</button>
         </div>
 
-        {/* Search + Add */}
-        <div className="search-add">
-          <div className="search-box">
-            <FaSearch className="search-icon" />
-            <input type="text" placeholder="Search" />
-          </div>
-
-          <button className="btn-add">Add</button>
-        </div>
-
-        {/* Table */}
-        <table className="user-table">
+        <table className="users-table">
           <thead>
             <tr>
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
-              <th>Actions</th>
+              <th style={{ textAlign: "center" }}>Actions</th>
             </tr>
           </thead>
 
@@ -71,17 +47,18 @@ export default function UserTable() {
                 <td>{u.email}</td>
                 <td>{u.role}</td>
                 <td className="actions">
-                  <FaEdit className="action-icon" />
-                  <FaEye className="action-icon" />
-                  <FaTrash className="action-icon" />
-                  <FaEllipsisV className="action-icon" />
+                  <span className="icon">✏</span>
+                  <span className="icon">👁</span>
+                  <span className="icon">🗑</span>
+                  <span className="icon">⋮</span>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-
-      </section>
+      </main>
     </div>
   );
 }
+
+export default UsersTable;

@@ -1,148 +1,148 @@
-/* --- Layout global --- */
-.page-container {
+/* GLOBAL PAGE FIX */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #f5f6f8;
+}
+
+/* GLOBAL LAYOUT */
+.layout {
   display: flex;
   height: 100vh;
   width: 100%;
-  background: #f5f7fa;
-  color: #1e293b;
-  font-family: sans-serif;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-/* --- Sidebar --- */
+/* SIDEBAR FIX */
 .sidebar {
-  width: 230px;
-  background: #0f172a;
+  width: 240px;
+  background: linear-gradient(180deg, #0f233c, #103a6f);
   color: white;
-  padding: 25px 15px;
+  padding: 25px;
+  
 }
 
 .sidebar-title {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 30px;
-  color: white;
 }
 
-.menu {
+.sidebar-menu {
   list-style: none;
   padding: 0;
 }
 
-.menu li {
-  display: flex;
-  align-items: center;
-  padding: 12px 10px;
-  margin-bottom: 8px;
+.sidebar-menu li {
+  padding: 12px 15px;
   border-radius: 8px;
   cursor: pointer;
-  gap: 10px;
+  margin-bottom: 8px;
+  transition: 0.2s ease;
 }
 
-.menu li .icon {
-  font-size: 18px;
+.sidebar-menu li:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.menu li:hover,
-.menu li.active {
-  background: #1e293b;
+.sidebar-menu .active {
+  background: rgba(255, 255, 255, 0.25);
 }
 
-/* --- Main content --- */
-.content {
+/* MAIN AREA FIX */
+.main {
   flex: 1;
-  padding: 30px 40px;
+  padding: 30px;
 }
 
-/* --- Topbar --- */
-.topbar {
+/* TOP NAV */
+.topnav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-  margin-bottom: 30px;
+  justify-content: flex-end;
+  margin-bottom: 25px;
 }
 
-.top-links a {
+.topnav a {
   margin-left: 20px;
-  color: #1e293b;
+  color: #333;
   text-decoration: none;
   font-weight: 500;
 }
 
-.top-links a:hover {
-  text-decoration: underline;
-}
-
-/* --- Search + Add --- */
-.search-add {
+/* SEARCH + ADD BUTTON */
+.controls {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-.search-box {
-  padding: 10px 15px;
+.search {
   width: 260px;
-  border: 1px solid #d1d5db;
+  padding: 10px 12px;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
+  border: 1px solid #ccc;
   background: white;
+  color: black;
 }
 
-.search-box input {
-  border: none;
-  outline: none;
-  margin-left: 8px;
-  width: 100%;
-}
-
-.btn-add {
-  background: #2563eb;
-  border: none;
-  padding: 10px 20px;
+/* BUTTON */
+.add-btn {
+  padding: 10px 24px;
+  background: #2f6fed;
   color: white;
-  font-size: 15px;
+  font-weight: bold;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
-.btn-add:hover {
-  background: #1d4ed8;
+.add-btn:hover {
+  background: #1954d4;
 }
 
-/* --- User table --- */
-.user-table {
+/* TABLE FIX */
+.users-table {
   width: 100%;
   border-collapse: collapse;
   background: white;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.user-table thead {
-  background: #f1f5f9;
-  font-weight: bold;
-}
-
-.user-table th,
-.user-table td {
-  padding: 14px 18px;
-  border-bottom: 1px solid #e2e8f0;
+.users-table th {
+  background: #f0f0f0;
+  padding: 16px;
   text-align: left;
+  font-weight: bold;
+  color: #333;
 }
 
+.users-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+.users-table tr:hover {
+  background: #f7f9fc;
+}
+
+/* ACTION ICONS */
 .actions {
-  display: flex;
-  gap: 12px;
+  text-align: center;
 }
 
-.action-icon {
+.icon {
+  margin: 0 6px;
   cursor: pointer;
-  font-size: 17px;
-  color: #475569;
+  font-size: 18px;
+  transition: 0.2s;
 }
 
-.action-icon:hover {
-  color: #1e293b;
+.icon:hover {
+ opacity:0.7;
+ color: red;
 }

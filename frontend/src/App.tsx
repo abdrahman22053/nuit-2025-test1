@@ -3,9 +3,7 @@ import UsersTable from "./UsersTable";
 
 function App() {
   return (
-    <div className="App">
-      <UsersTable />
-    </div>
+   <UsersTable />
   )
 }
 
